@@ -33,8 +33,8 @@ And Region_id is 2
                 .pathParam("country_id", "US")
                 .when()
                 .get("/countries/{country_id}");
-        assertEquals(200,response.statusCode());
-        assertEquals("application/json",response.contentType());
+        assertEquals(200, response.statusCode());
+        assertEquals("application/json", response.contentType());
         assertTrue(response.body().asString().contains("US"));
         assertTrue(response.body().asString().contains("US"));
 
@@ -52,26 +52,26 @@ TASK 2 :
 - And all department_ids are 80
 - Count is 25
 */
-@DisplayName("users sends request to /employees with query param")
+    @DisplayName("users sends request to /employees with query param")
     @Test
-    public void test2(){
+    public void test2() {
 
-    Response response = given().accept(ContentType.JSON).queryParam("q", "{\"department_id\":80}").when().get("/employees");
-   // response.prettyPrint();
-    assertEquals(200,response.statusCode());
-    assertEquals("application/json",response.contentType());
+        Response response = given().accept(ContentType.JSON).queryParam("q", "{\"department_id\":80}").when().get("/employees");
+        // response.prettyPrint();
+        assertEquals(200, response.statusCode());
+        assertEquals("application/json", response.contentType());
 
-    List<String> jobId = response.path("items.job_id");
-    for (String eachID : jobId) {
+        List<String> jobId = response.path("items.job_id");
+        for (String eachID : jobId) {
 
-           assertTrue(eachID.contains("SA"));
+            assertTrue(eachID.contains("SA"));
+        }
+        List<String> departmentId = response.path("items.department_id");
+        for (String eachId : departmentId) {
+            assertEquals("80", eachId);
+        }
+
     }
-    List<String> departmentId= response.path("items.department_id");
-    for (String eachId : departmentId) {
-        assertEquals("80", eachId);
-    }
-
-}
 
     /*
 TASK 3 :
@@ -85,4 +85,24 @@ TASK 3 :
 - And Country_name are;
 Australia,China,India,Japan,Malaysia,Singapore
 */
+    @Test
+    public void test3() {
+        Response response = given().accept(ContentType.JSON)
+                .and().queryParam("q", "{\"region_id\":3}").when()
+                .get("/countries");
+        response.prettyPrint();
+        assertEquals(200, response.statusCode());
+        List<Integer> allRegion_Id = response.path("items.region_id");
+        for (Integer eachId : allRegion_Id) {
+            assertEquals(3, eachId);
+        }
+        Object count = response.path("count");
+        assertEquals(6, count);
+        boolean hasMore = response.path("hasMore");
+        assertFalse(hasMore);
+        List<String> allCountryName = response.path("items.country_name");
+        for (String eachCountryName : allCountryName) {
+            System.out.println("eachCountryName = " + eachCountryName);
+        }
+    }
 }
