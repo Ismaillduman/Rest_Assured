@@ -95,4 +95,37 @@ public class P02_HRWithJsonPath extends HrTestBase {
                 " " + jsonPath.getString("items.min {it.salary}.first_name"));
 
     }
+
+           /*
+
+    TASK
+    Given
+             accept type is application/json
+     When
+             user sends get request to /locaitons
+     Then
+             response status code must be 200
+             content type equals to application/json
+             get the second city with JsonPath
+             get the last city with JsonPath
+             get all country ids
+             get all city where their country id is UK
+
+      */
+    @DisplayName(" get the second city with JsonPath")
+@Test
+    public void test3(){
+        Response response = given().accept(ContentType.JSON).get("/locations");
+        response.prettyPrint();
+        assertEquals(200,response.statusCode());
+        assertEquals("application/json",response.contentType());
+        JsonPath jsonPath = response.jsonPath();
+
+       assertEquals("Bern",jsonPath.getString("items[1].city"));
+       assertEquals("Whitehorse",jsonPath.getString("items[-1].city"));
+        System.out.println("jsonPath.getList(\"items.country_id\") = " + jsonPath.getList("items.country_id"));
+        System.out.println("jsonPath.getList(\"items.findAll {it.country_id=='UK'}.city\") = " + jsonPath.getList("items.findAll {it.country_id=='UK'}.city"));
+
+    }
+
 }
