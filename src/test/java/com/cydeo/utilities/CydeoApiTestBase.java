@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 
 public abstract class CydeoApiTestBase {
     @BeforeAll
-    public void init(){
-        RestAssured.baseURI="https://44.204.20.3"
+    public static void init(){
+        RestAssured.baseURI="https://api.training.cydeo.com";
     }
 }
