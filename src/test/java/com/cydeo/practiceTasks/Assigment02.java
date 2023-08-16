@@ -66,9 +66,9 @@ TASK 2 :
 
             assertTrue(eachID.contains("SA"));
         }
-        List<String> departmentId = response.path("items.department_id");
-        for (String eachId : departmentId) {
-            assertEquals("80", eachId);
+        List<Integer> departmentId = response.path("items.department_id");
+        for (Integer eachId : departmentId) {
+            assertEquals(80, eachId);
         }
 
     }

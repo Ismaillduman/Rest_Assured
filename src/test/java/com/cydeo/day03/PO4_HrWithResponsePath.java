@@ -3,6 +3,8 @@ package com.cydeo.day03;
 import com.cydeo.utilities.HrTestBase;
 import io.restassured.http.ContentType;
 import static io.restassured.internal.common.assertion.Assertion.*;
+
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
@@ -20,9 +22,10 @@ public class PO4_HrWithResponsePath extends HrTestBase {
                 .when().get("/countries");
         response.prettyPrint();
 
-
+        JsonPath jsonPath = response.jsonPath();
         //print limit
-        System.out.println("response.path(\"Limit\") = " + response.path("Limit"));
+        System.out.println("jsonPath.getString(\"Limit\") = " + jsonPath.getString("limit"));
+        System.out.println("response.path(\"Limit\") = " + response.path("limit"));
 
         //print hasMore
         System.out.println("response.path(\"hasMore\") = " + response.path("hasMore"));
