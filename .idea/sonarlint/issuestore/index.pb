@@ -14,3 +14,7 @@ l
 <src/test/java/com/cydeo/day03/PO1_SpartanWithParameters.java,f\2\f2a28fb1be1b60c66baa381e67b97e02e92071a7
 g
 7src/test/java/com/cydeo/day03/P02_HrWithParameters.java,3\c\3c2e073769798a3e26e0b6dd80e24133daff4fa0
+e
+5src/test/java/com/cydeo/day04/P02_HRWithJsonPath.java,f\6\f63760b7b9536247419e06c96a669c24345c0e36
+f
+6src/test/java/com/cydeo/practiceTasks/Assigment03.java,d\f\df44bc481e6e8fc6748298e40945efc71f7a5777

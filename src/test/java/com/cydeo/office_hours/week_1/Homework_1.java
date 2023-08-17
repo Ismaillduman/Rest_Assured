@@ -22,15 +22,5 @@ public class Homework_1 extends HrTestBase {
 
      */
 
-    @Test
-    public void task3(){
-//        Response response = given().accept(ContentType.JSON)
-//                .and().pathParam("region_id", 1)
-//                .when().get("/regions/{region_id}")
-//                        .then().assertThat().statusCode(200).contentType("application/json");
-//
-//        response.prettyPrint();
 
-
-    }
 }
