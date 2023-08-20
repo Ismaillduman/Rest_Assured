@@ -1,6 +1,4 @@
 
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 g
 7src/test/java/com/cydeo/day01/P01_simpleGetRequest.java,2\6\26fbd0cda0f58f13dbefdcdcee757ce23d83974c
 :
@@ -16,3 +14,23 @@ g
 7src/test/java/com/cydeo/day03/P02_HrWithParameters.java,3\c\3c2e073769798a3e26e0b6dd80e24133daff4fa0
 f
 6src/test/java/com/cydeo/practiceTasks/Assigment03.java,d\f\df44bc481e6e8fc6748298e40945efc71f7a5777
+i
+9src/test/java/com/cydeo/utilities/ZippopotamTestBase.java,a\8\a87a13d86e895df258cb50dc7e771856e2e29ae8
+k
+;src/test/java/com/cydeo/office_hours/week_1/Homework_1.java,2\8\2877f39ecfb0e88f232b323d38e9c0b21812a1e8
+f
+6src/test/java/com/cydeo/practiceTasks/Assigment02.java,b\3\b38c9a898c03f03217e797cf3be2196bd349ca8b
+f
+6src/test/java/com/cydeo/practiceTasks/Assigment01.java,4\7\47ddb1227204124b5a54f736b760bfbdc2e35e57
+l
+<src/test/java/com/cydeo/day05/P01_HamCrestMatchersIntro.java,f\3\f312c5f58b664e13d9fa8bb69776aefd1d6ebf7b
+g
+7src/test/java/com/cydeo/day05/P02_HamcrestSpartans.java,e\7\e7238acfc2bc8746626dfde6aa590acfc8d7e445
+a
+1src/test/java/com/cydeo/utilities/HrTestBase.java,c\b\cb36faa3656d113d6b148cd6ba64d96658cf5119
+i
+9src/test/java/com/cydeo/day03/PO4_HrWithResponsePath.java,6\a\6a9cfc8252ad01999f11bfbffecff65db5c57c41
+j
+:src/test/java/com/cydeo/day04/PO1_SpartanWithJsonPath.java,3\2\3248974de8e7cc45bace391d823c2066268c8d10
+e
+5src/test/java/com/cydeo/day04/P02_HRWithJsonPath.java,f\6\f63760b7b9536247419e06c96a669c24345c0e36
