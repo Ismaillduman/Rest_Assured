@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -79,12 +80,16 @@ public class P04_Deserialization extends FruitTestBase {
             List<Object> all_id = customers.stream().map(eachCustomer -> eachCustomer.get("id")).collect(Collectors.toList());
             System.out.println("all_id = " + all_id);
             System.out.println("====== PRINT CUSTOMERS Names ======");
-            for (Map<String, Object> each_customer : customers) {
-                System.out.println("customers_name "+each_customer.get("name"));
 
-                List<Object> all_name = customers.stream().map(eachCustomer -> eachCustomer.get("name")).collect(Collectors.toList());
+            System.out.println("jsonPath.get(\"customers.name\") = " + jsonPath.get("customers.name"));
+            List<String> allName= new ArrayList<>();
+            for (Map<String, Object> each_customer : customers) {
+                allName.add(each_customer.toString());
+            }
+            System.out.println("allName = " + allName);
+            List<Object> all_name = customers.stream().map(eachCustomer -> eachCustomer.get("name")).collect(Collectors.toList());
                 System.out.println("all_name = " + all_name);
 
-            }
+
         }
     }
