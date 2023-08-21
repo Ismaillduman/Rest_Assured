@@ -64,7 +64,6 @@ public class P04_Deserialization extends FruitTestBase {
             System.out.println("====== GET CUSTOMERS ======");
 
             List<Map<String,Object>> customers = (List<Map<String, Object>>) allData.get("customers");
-
             System.out.println("customers = " + customers);
             System.out.println("====== GET FIRST CUSTOMER ======");
 
