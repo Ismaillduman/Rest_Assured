@@ -34,3 +34,11 @@ j
 :src/test/java/com/cydeo/day04/PO1_SpartanWithJsonPath.java,3\2\3248974de8e7cc45bace391d823c2066268c8d10
 e
 5src/test/java/com/cydeo/day04/P02_HRWithJsonPath.java,f\6\f63760b7b9536247419e06c96a669c24345c0e36
+k
+;src/test/java/com/cydeo/day04/P03_CYDEOTrainingApiTest.java,7\0\7021019f786f8289d8cf0c775ac34238e2914ade
+d
+4src/test/java/com/cydeo/utilities/FruitTestBase.java,2\b\2ba0c71d274d119569a38589bfd4f8698128a537
+a
+1src/test/java/com/cydeo/day05/P03_HamcrestHR.java,3\e\3e4fc34d22be0b71f549830b0a88aa098218939c
+s
+Csrc/test/java/com/cydeo/day05/P04_DeserializationToCollections.java,8\2\824f0b820b899b12cf6fd37543c6aeb8fd7dbec4
