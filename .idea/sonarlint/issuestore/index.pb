@@ -12,14 +12,10 @@ l
 <src/test/java/com/cydeo/day03/PO1_SpartanWithParameters.java,f\2\f2a28fb1be1b60c66baa381e67b97e02e92071a7
 g
 7src/test/java/com/cydeo/day03/P02_HrWithParameters.java,3\c\3c2e073769798a3e26e0b6dd80e24133daff4fa0
-f
-6src/test/java/com/cydeo/practiceTasks/Assigment03.java,d\f\df44bc481e6e8fc6748298e40945efc71f7a5777
 i
 9src/test/java/com/cydeo/utilities/ZippopotamTestBase.java,a\8\a87a13d86e895df258cb50dc7e771856e2e29ae8
 k
 ;src/test/java/com/cydeo/office_hours/week_1/Homework_1.java,2\8\2877f39ecfb0e88f232b323d38e9c0b21812a1e8
-f
-6src/test/java/com/cydeo/practiceTasks/Assigment02.java,b\3\b38c9a898c03f03217e797cf3be2196bd349ca8b
 f
 6src/test/java/com/cydeo/practiceTasks/Assigment01.java,4\7\47ddb1227204124b5a54f736b760bfbdc2e35e57
 l
