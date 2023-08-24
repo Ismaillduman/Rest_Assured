@@ -5,18 +5,18 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class P04_SpartanFlow extends SpartanTestBase {
-    static int id;
+    private static int id;
     @Test
     @Order(1)
     public void postSpartan(){
@@ -28,16 +28,12 @@ public class P04_SpartanFlow extends SpartanTestBase {
         Response response = given().log().body().contentType(ContentType.JSON)
                 .body(bodyRequestPost)
                 .when().post("/api/spartans")
-                .then().log().all().statusCode(HttpStatus.SC_CREATED).extract().response();
-        JsonPath jsonPath = response.jsonPath();
+                .then().log().all().statusCode(HttpStatus.SC_CREATED).
+        body("success",is("A Spartan is Born!")).extract().response();
 
-      id= jsonPath.getInt("data.id");
-        given().accept(ContentType.JSON)
-                .pathParam("id",id)
-                .when().get("/api/spartans/{id}")
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .body("name",is("API Flow POST"));
+
+      id= response.path("data.id");
+
     }
 
     @Test
@@ -75,6 +71,46 @@ public class P04_SpartanFlow extends SpartanTestBase {
 
     }
 
+    @Test
+    @Order(4)
+    public void getSpartanAfterUpdate(){
+
+        given()
+                .pathParam("id", id)
+                .when()
+                .get("/api/spartans/{id}")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .body("name", equalTo("API PUT Flow"));
+    }
+    @Test
+    @Order(5)
+    public void deleteSpartanWithId(){
+
+        Map<String,Object> bodyRequestPost= new LinkedHashMap<>();
+        bodyRequestPost.put("name","API PUT Flow");
+        bodyRequestPost.put("gender","Female");
+        bodyRequestPost.put("phone",3213213213l);
+
+        given().log().body().contentType(ContentType.JSON)
+                .pathParam("id",id)
+                .body(bodyRequestPost)
+                .when().delete("/api/spartans/{id}")
+                .then().log().all().statusCode(HttpStatus.SC_NO_CONTENT).extract().response();
+    }
+
+    @Test
+    @Order(6)
+    public void getSpartanAfterDelete(){
+
+        given()
+                .pathParam("id", id)
+                .when()
+                .get("/api/spartans/{id}")
+                .then()
+                .statusCode(HttpStatus.SC_NOT_FOUND);
+
+    }
      /*
 
     Create a Spartan Flow to run below testCases dynamically

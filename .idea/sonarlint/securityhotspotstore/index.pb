@@ -22,8 +22,6 @@ l
 <src/test/java/com/cydeo/day05/P01_HamCrestMatchersIntro.java,f\3\f312c5f58b664e13d9fa8bb69776aefd1d6ebf7b
 g
 7src/test/java/com/cydeo/day05/P02_HamcrestSpartans.java,e\7\e7238acfc2bc8746626dfde6aa590acfc8d7e445
-a
-1src/test/java/com/cydeo/utilities/HrTestBase.java,c\b\cb36faa3656d113d6b148cd6ba64d96658cf5119
 i
 9src/test/java/com/cydeo/day03/PO4_HrWithResponsePath.java,6\a\6a9cfc8252ad01999f11bfbffecff65db5c57c41
 j
@@ -74,5 +72,3 @@ f
 6src/test/java/com/cydeo/utilities/SpartanTestBase.java,6\2\62079d2beb9242d3d454ee3141a7f8a99a6ce8fe
 _
 /src/test/java/com/cydeo/pojo/ready/Company.java,4\1\41866b6eff8786b3fcc87a38f69fb7d13cebf9fd
-f
-6src/test/java/com/cydeo/utilities/FormulaTestBase.java,e\8\e8a54994e974d70df83edd388b39e08aba74095a
