@@ -64,3 +64,15 @@ Y
 )src/test/java/com/cydeo/pojo/Company.java,6\a\6a2fdb7beddb74d0e7071f85b9a007c788191743
 Z
 *src/test/java/com/cydeo/pojo/Students.java,7\6\761475bb157ed93fa841dc645a80f5b305efc85f
+r
+Bsrc/test/java/com/cydeo/day07/P01_CydeoApiDeserializationPOJO.java,9\3\931f567d17480ee1b2e37806d6350545ac9aa43c
+a
+1src/test/java/com/cydeo/practiceTasks/Homework_04,4\e\4e9f10af005f74ef6eed7202a95942e85ef528de
+_
+/src/test/java/com/cydeo/pojo/ready/Address.java,f\9\f9a965234565354dbeb3edd095c28e49066ab70f
+f
+6src/test/java/com/cydeo/utilities/SpartanTestBase.java,6\2\62079d2beb9242d3d454ee3141a7f8a99a6ce8fe
+_
+/src/test/java/com/cydeo/pojo/ready/Company.java,4\1\41866b6eff8786b3fcc87a38f69fb7d13cebf9fd
+f
+6src/test/java/com/cydeo/utilities/FormulaTestBase.java,e\8\e8a54994e974d70df83edd388b39e08aba74095a

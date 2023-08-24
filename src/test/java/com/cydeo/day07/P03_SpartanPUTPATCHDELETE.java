@@ -23,12 +23,12 @@ public class P03_SpartanPUTPATCHDELETE extends SpartanTestBase {
         requestBodyMap.put("phone","8877445596");
         int id=115;
 
-        given() .contentType(ContentType.JSON)
+        given() .contentType("application/json")
                 .pathParam("id",id)
 
                 .body(requestBodyMap)
                 .when().put("/api/spartans/{id}")
-                .then().statusCode(HttpStatus.SC_NO_CONTENT);
+                .then().statusCode(204);
     }
 
     @DisplayName("PATCH Spartan with Map")
