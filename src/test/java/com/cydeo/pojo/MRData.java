@@ -16,6 +16,8 @@ public class MRData {
     private String limit;
     private String total;
 
+    private DriverTable driverTable;
+
     @JsonProperty("StatusTable")
     private StatusTable statusTable;
 

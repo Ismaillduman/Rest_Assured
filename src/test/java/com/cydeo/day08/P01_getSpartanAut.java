@@ -1,6 +1,7 @@
 package com.cydeo.day08;
 
 import com.cydeo.utilities.SpartanAuTestBase;
+import com.fasterxml.jackson.databind.introspect.ClassIntrospector;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -30,6 +31,28 @@ public class P01_getSpartanAut extends SpartanAuTestBase {
                 .then().log().all()
                 .statusCode(HttpStatus.SC_OK);
     }
+@DisplayName("DELETE /api/spartans/{id} --> EDITOR expect 403 -->Forbiden")
+    @Test
+    public void test3(){
+    given().accept(ContentType.JSON)
+            .auth().basic("editor","editor")
+            .pathParam("id",100)
+            .when()
+            .delete("/api/spartans/{id}")
+            .then().log().all()
+            .statusCode(HttpStatus.SC_FORBIDDEN)
+            .body("message",is("Forbidden"));
+    }
+    @DisplayName("DELETE /api/spartans/{id} --> Admin expect 200 -->OK")
+    @Test
+    public void test4(){
+        given().accept(ContentType.JSON)
+                .auth().basic("admin","admin")
+                .pathParam("id",1)
+                .when()
+                .delete("/api/spartans/{id}")
+                .then().log().all()
+                .statusCode(HttpStatus.SC_NO_CONTENT);
 
-
+    }
 }

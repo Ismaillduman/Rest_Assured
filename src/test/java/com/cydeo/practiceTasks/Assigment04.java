@@ -1,5 +1,7 @@
 package com.cydeo.practiceTasks;
 
+import com.cydeo.pojo.Driver;
+import com.cydeo.pojo.DriverTable;
 import com.cydeo.utilities.FormulaTestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -121,4 +123,35 @@ Map<String,Object> driverMap=jsonpath.getMap(“pathOfDriver”)*/
       assertThat(driversInfo,is(expectedDriversInfo));
 
     }
+
+    @DisplayName("GET drivers.json pojo")
+    @Test
+    public void test4() {
+        Response response = given().log().uri().accept(ContentType.JSON)
+                .pathParam("driverId", "alonso")
+                .when().get("/drivers/{driverId}.json")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .contentType("application/json; charset=utf-8")
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        Driver driver = jsonPath.getObject("MRData.DriverTable.Drivers[0]", Driver.class);
+
+        System.out.println("driver.getFamilyName() = " + driver.getFamilyName());
+        System.out.println("driver.getNationality() = " + driver.getNationality());
+        System.out.println("driver.getGivenName() = " + driver.getGivenName());
+        /*   List<Object> driversList = jsonPath.getList("MRData.DriverTable.Drivers");
+        System.out.println("driversList.get(0) = " + driversList.get(0));
+       {
+                    "driverId": "abate",
+                    "url": "http://en.wikipedia.org/wiki/Carlo_Mario_Abate",
+                    "givenName": "Carlo",
+                    "familyName": "Abate",
+                    "dateOfBirth": "1932-07-10",
+                    "nationality": "Italian"
+                }*/
+
+    }
+
+
 }

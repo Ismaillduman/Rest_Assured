@@ -29,6 +29,11 @@ Print givenName of Driver by using extract method after HamCrest
 Map<String,Object> driverMap=jsonpath.getMap(“pathOfDriver”)
 - Convert Driver information POJO Class
 Driver driver=getObject(“pathOfDriver”,Driver.class)
+
+
+
+
+
 TASK 2 : Solve same task with 4 different way
 - Use JSONPATH
 int total = jsonpath.getInt(“pathOfField”)
