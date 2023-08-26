@@ -38,8 +38,6 @@ s
 Csrc/test/java/com/cydeo/day05/P04_DeserializationToCollections.java,8\2\824f0b820b899b12cf6fd37543c6aeb8fd7dbec4
 h
 8src/test/java/com/cydeo/day06/PO1_HrDeserialization.java,c\c\cca2e797d9814ba349a61d958907bca607080975
-X
-(src/test/java/com/cydeo/pojo/Region.java,0\c\0ca045e5bea4a1bc55e44d6cd43507aec2844af9
 r
 Bsrc/test/java/com/cydeo/liveReview/week02/P04_Deserialization.java,5\2\523c9c07e8348c421ba257e1802f68c77c089e29
 V
