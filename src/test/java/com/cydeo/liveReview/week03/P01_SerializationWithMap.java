@@ -30,8 +30,16 @@ public class P01_SerializationWithMap extends FruitTestBase {
                 .extract().response();
 
         response.prettyPeek();
+        String self_link=response.path("self_link");
+        String id=self_link.substring(self_link.lastIndexOf("/")+1);
+        System.out.println("id = " + id);
+
+        int createdFruitId= Integer.parseInt(id);
+        System.out.println("fruitId = " + createdFruitId);
+        System.out.println("response.jsonPath().get(\"id\") = " + response.jsonPath().get("id"));
 
 
     }
+
 
 }
