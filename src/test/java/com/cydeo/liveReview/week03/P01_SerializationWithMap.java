@@ -3,6 +3,7 @@ package com.cydeo.liveReview.week03;
 import com.cydeo.utilities.FruitTestBase;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,7 @@ import static io.restassured.RestAssured.*;
 
 public class P01_SerializationWithMap extends FruitTestBase {
 
-
+    static int createdFruitId;
 
     @Test
     void createFruit(){
@@ -34,12 +35,21 @@ public class P01_SerializationWithMap extends FruitTestBase {
         String id=self_link.substring(self_link.lastIndexOf("/")+1);
         System.out.println("id = " + id);
 
-        int createdFruitId= Integer.parseInt(id);
+        createdFruitId= Integer.parseInt(id);
         System.out.println("fruitId = " + createdFruitId);
         System.out.println("response.jsonPath().get(\"id\") = " + response.jsonPath().get("id"));
 
 
     }
 
+    @Test
+    void getFruit(){
+
+        given().log().uri().
+                accept(ContentType.JSON)
+                .pathParam("id", createdFruitId)
+                .get("/products/{id}")
+                .prettyPeek();
+    }
 
 }
