@@ -1,7 +1,6 @@
 package com.cydeo.day08;
 
 import com.cydeo.utilities.SpartanAuTestBase;
-import com.fasterxml.jackson.databind.introspect.ClassIntrospector;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
@@ -10,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class P01_getSpartanAut extends SpartanAuTestBase {
+public class P01_getSpartanAutBasic extends SpartanAuTestBase {
 
     @DisplayName("GET Spartan with not Authorization")
     @Test
@@ -55,4 +54,6 @@ public class P01_getSpartanAut extends SpartanAuTestBase {
                 .statusCode(HttpStatus.SC_NO_CONTENT);
 
     }
+
+
 }
