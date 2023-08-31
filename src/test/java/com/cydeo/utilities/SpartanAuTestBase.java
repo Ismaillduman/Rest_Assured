@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.reset;
 public class SpartanAuTestBase {
     @BeforeAll
     public static void init() {
-        RestAssured.baseURI = "http://44.204.20.3:7000";
+        RestAssured.baseURI = "http://54.158.239.73:7000";
     }
 
     @AfterAll
