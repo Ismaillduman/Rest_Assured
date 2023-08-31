@@ -12,8 +12,6 @@ l
 <src/test/java/com/cydeo/day03/PO1_SpartanWithParameters.java,f\2\f2a28fb1be1b60c66baa381e67b97e02e92071a7
 g
 7src/test/java/com/cydeo/day03/P02_HrWithParameters.java,3\c\3c2e073769798a3e26e0b6dd80e24133daff4fa0
-i
-9src/test/java/com/cydeo/utilities/ZippopotamTestBase.java,a\8\a87a13d86e895df258cb50dc7e771856e2e29ae8
 k
 ;src/test/java/com/cydeo/office_hours/week_1/Homework_1.java,2\8\2877f39ecfb0e88f232b323d38e9c0b21812a1e8
 f
@@ -68,7 +66,5 @@ a
 1src/test/java/com/cydeo/practiceTasks/Homework_04,4\e\4e9f10af005f74ef6eed7202a95942e85ef528de
 _
 /src/test/java/com/cydeo/pojo/ready/Address.java,f\9\f9a965234565354dbeb3edd095c28e49066ab70f
-f
-6src/test/java/com/cydeo/utilities/SpartanTestBase.java,6\2\62079d2beb9242d3d454ee3141a7f8a99a6ce8fe
 _
 /src/test/java/com/cydeo/pojo/ready/Company.java,4\1\41866b6eff8786b3fcc87a38f69fb7d13cebf9fd
