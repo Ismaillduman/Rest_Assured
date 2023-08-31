@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class P01_getSpartanAut extends SpartanAuTestBase {
+public class P01_getSpartanAutBasic extends SpartanAuTestBase {
 
     @DisplayName("GET Spartan with not Authorization")
     @Test
@@ -29,6 +29,30 @@ public class P01_getSpartanAut extends SpartanAuTestBase {
                 .when().get("/api/spartans")
                 .then().log().all()
                 .statusCode(HttpStatus.SC_OK);
+    }
+@DisplayName("DELETE /api/spartans/{id} --> EDITOR expect 403 -->Forbiden")
+    @Test
+    public void test3(){
+    given().accept(ContentType.JSON)
+            .auth().basic("editor","editor")
+            .pathParam("id",100)
+            .when()
+            .delete("/api/spartans/{id}")
+            .then().log().all()
+            .statusCode(HttpStatus.SC_FORBIDDEN)
+            .body("message",is("Forbidden"));
+    }
+    @DisplayName("DELETE /api/spartans/{id} --> Admin expect 200 -->OK")
+    @Test
+    public void test4(){
+        given().accept(ContentType.JSON)
+                .auth().basic("admin","admin")
+                .pathParam("id",1)
+                .when()
+                .delete("/api/spartans/{id}")
+                .then().log().all()
+                .statusCode(HttpStatus.SC_NO_CONTENT);
+
     }
 
 
